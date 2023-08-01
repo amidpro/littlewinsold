@@ -1,5 +1,3 @@
-/* Final clean CSS */
-
 /* Common styles */
 h1,
 h2,
@@ -140,7 +138,8 @@ q:after {
   text-align: center;
   position: absolute;
   top: 85%;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #333;
   color: #98ff98;
   text-decoration: none;
@@ -169,6 +168,37 @@ q:after {
 #image-links-section {
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Center the "Get Started" button with the image banner */
+  .banner-content {
+    position: relative;
+  }
+  .button-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Make image links stay in a vertical row on different screen resolutions */
+  #image-links-section .col-md-4 {
+    flex-basis: 100%;
+  }
+
+  /* Hide the overlay and show the clickable links underneath each image link for mobile devices */
+  .overlay {
+    display: none;
+  }
+  .img-link {
+    display: block;
+    margin-top: 10px;
+    color: #98ff98;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
 /* Image link overlays styles */
@@ -237,7 +267,6 @@ q:after {
   padding-right: 0;
 }
 
-
 /* Video container */
 .video-container {
   position: relative;
@@ -252,8 +281,6 @@ q:after {
   width: 100%;
   height: 100%;
 }
-
-
 
 /* Free Resources section */
 .free-resources-section {
@@ -322,7 +349,6 @@ q:after {
     flex-basis: 100%; /* Each item takes up 100% of the container width (stacked vertically) */
   }
 }
-
 
 /* Join Our Community Footer section */
 .join-community-section {
